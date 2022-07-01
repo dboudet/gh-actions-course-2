@@ -9,24 +9,24 @@ jobs:
   ubuntu-date:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
+    # - name: checkout
+    #   uses: actions/checkout@v3
     - name: print date
       run: date
 
   windows-date:
     runs-on: windows-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
+    # - name: checkout
+    #   uses: actions/checkout@v3
     - name: print date
       run: "Get-Date"
 
   macos-date:
     runs-on: macos-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
+    # - name: checkout
+    #   uses: actions/checkout@v3
     - name: print date
       run: date
 
@@ -34,7 +34,7 @@ jobs:
     needs: [ubuntu-date,windows-date,macos-date]
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
+    # - name: checkout
+    #   uses: actions/checkout@v3
     - name: print date
       run: date
