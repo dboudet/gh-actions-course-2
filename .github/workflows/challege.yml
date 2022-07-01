@@ -21,7 +21,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
     - name: print date
-      run: Get-Date
+      run: "Get-Date"
 
 jobs:
   MacOs Job:
