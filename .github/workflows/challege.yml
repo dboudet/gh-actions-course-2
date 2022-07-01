@@ -14,7 +14,6 @@ jobs:
     - name: print date
       run: date
 
-jobs:
   Windows Job:
     runs-on: windows-latest
     steps:
@@ -23,7 +22,6 @@ jobs:
     - name: print date
       run: "Get-Date"
 
-jobs:
   MacOs Job:
     runs-on: macos-latest
     steps:
@@ -32,7 +30,6 @@ jobs:
     - name: print date
       run: date
 
-jobs:
   Final Job:
     needs: [Ubuntu Job, Windows Job, MacOs Job]
     runs-on: ubuntu-latest
@@ -41,4 +38,3 @@ jobs:
       uses: actions/checkout@v3
     - name: print date
       run: date
-
