@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  Ubuntu Job:
+  ubuntu-date:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
@@ -14,7 +14,7 @@ jobs:
     - name: print date
       run: date
 
-  Windows Job:
+  windows-date:
     runs-on: windows-latest
     steps:
     - name: checkout
@@ -22,7 +22,7 @@ jobs:
     - name: print date
       run: "Get-Date"
 
-  MacOs Job:
+  macos-date:
     runs-on: macos-latest
     steps:
     - name: checkout
@@ -30,7 +30,7 @@ jobs:
     - name: print date
       run: date
 
-  Final Job:
+  final-job:
     needs: [Ubuntu Job, Windows Job, MacOs Job]
     runs-on: ubuntu-latest
     steps:
