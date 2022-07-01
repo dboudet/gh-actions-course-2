@@ -31,7 +31,7 @@ jobs:
       run: date
 
   final-job:
-    needs: [Ubuntu Job, Windows Job, MacOs Job]
+    needs: [ubuntu-date,windows-date,macos-date]
     runs-on: ubuntu-latest
     steps:
     - name: checkout
